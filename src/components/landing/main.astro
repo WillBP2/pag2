@@ -1,6 +1,7 @@
 ---
-import Punto from "../globales/punto.astro"
-const card = [
+import Card from "../globales/card.astro"
+import Inicio from "../globales/inicio.astro"
+const carsd1 = [
     {img: '/img/iconos.png', titulo: "Síntesis", parrafo: "La síntesis es un resumen de lo escrito por algún autor, pero, con otras palabras. Se recomienda leer párrafos completos para determinar cuáles son los contenidos esenciales y reescribirlos, sin que..."},
 
     {img: '/img/iconos2.png', titulo: "Mapa Conceptual", parrafo: "Es una representación en forma de diagrama de una cierta cantidad de información de varias formas. Puede ser..."},
@@ -11,34 +12,43 @@ const card = [
 
     {img: '/img/iconos2.png', titulo: "Análisis de lectura", parrafo: "Es un proceso que se realiza entre el lector y el texto; es dinámico, interactivo y llega a ser un dialogo mental entre lo escrito y el que lo lee. Esto permite..."}
 ]
+
+
 ---
 <main>
     <section class="section-1">
-        <article class="article1">
-            <h1 class="article1-h1">Técnicas andragógicas</h1>
-            <img src="/img/Inicio.png" alt="" class="img-inicio" />
 
-            <p class="article1-p">
-                La educación se encuentra nutrida de distintas técnicas e
-                instrumentos que proporcionan al docente herramientas útiles y
-                validas, que son importantes de conocer ya que ofrecen formas de
-                evaluación y estrategias en las que el contexto determina y
-                requieren de la participación tanto de estudiantes como de
-                maestros.
-            </p>
-        </article>
+        <Inicio titulo_i="Técnicas andragógicas" parrafo_i="La educación se encuentra nutrida de distintas técnicas e instrumentos que proporcionan al docente herramientas útiles y validas, que son importantes de conocer ya que ofrecen formas de evaluación y estrategias en las que el contexto determina y requieren de la participación tanto de estudiantes como de maestros." img_i="/img/Inicio.png"></Inicio>
+        
+<article class="carsd1">
+    <div class="nose">Técnica andragogicas centradas en el estudiante </div>
+      {carsd1.map(({img, titulo, parrafo}) => (
+           <Card  titulo={titulo} img={img} parrafo={parrafo}></Card>
+        ))}
+</article>
+    </section>
 
-            <div class="nose">concepto</div>
-            {card.map(({ img, titulo, parrafo}) =>(
-                <Punto img={img} titulo={titulo} parrafo={parrafo} boton="Saber mas"></Punto>
-            ))}
-            
+        <section class="section-1">
+
+        <Inicio titulo_i="Técnicas andragógicas centradas en grupos" img_i="/img/Inicio.png" parrafo_i="Se presenta una propuesta que lleva a considerar el uso de las técnicas grupales como una herramienta andragógica para la enseñanza del estudiante universitario.Es el resultado de una larga experiencia en la investigación de campo. Se procede a asignar a los estudiantes en grupos de dos o más la tarea de investigar el tema asignado. Para cada subtema se encarga un estudiante, quien adquiere su posición personal del conocimiento adquirido. La sumatoria de los conocimientos adquiridos por parte de cada uno de los componentes del grupo permite crear posiciones personales, de cuya sumatoria se llega a un consenso en el grupo. Para esto se abren las opciones de las preguntas de los otros estudiantes de aula por cuyas participaciones se van construyendo criterios de conocimiento en los modelos mentales de cada estudiante."></Inicio>
+        
+<article class="carsd1">
+    <div class="nose">Técnica andragogicas centradas grupos </div>
+      {carsd1.map(({img, titulo, parrafo}) => (
+           <Card  titulo={titulo} img={img} parrafo={parrafo}></Card>
+        ))}
+</article>
     </section>
 </main>
 
 <style>
+    .carsd1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
     .section-1 {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         padding-top: 100px;
@@ -59,16 +69,14 @@ const card = [
     main {
         padding: 20px;
     }
-  
-
-    .nose {
+    .img-inicio {
+        border-radius: 10px;
+    }
+     .nose {
         padding: 20px;
         background-color: #111111;
         border-radius: 10px;
         color: #bfc1c6e0;
         text-align: center;
-    }
-    .img-inicio {
-        border-radius: 10px;
     }
 </style>
