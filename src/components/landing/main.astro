@@ -1,11 +1,11 @@
 ---
 import Punto from "../globales/punto.astro"
 const card = [
-    {img: '/img/iconos.png', titulo: "Punto clave", parrafo: "HDFUHDH DHFDHFDHF HDHFDHH dhhFHPEFWE EHPFGef uefweue dchdcd hdfdfd sifhEHF CIDCHHASC CIHCSDOH CZO[HCH CHC  ISO[CHH CIO[h  IHCH{c {oichEU HC IUspdGDEY ECYETB  CEYOe CEYuevuv EYGF", boton: "boton"},
+    {img: '/img/iconos.png', titulo: "Punto clave", parrafo: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias excepturi quo repudiandae optio ullam perferendis illum."},
 
-    {img: '/img/iconos.png', titulo: "Punto clave", parrafo: "HDFUHDH DHFDHFDHF HDHFDHH dhhFHPEFWE EHPFGef uefweue dchdcd hdfdfd sifhEHF CIDCHHASC CIHCSDOH CZO[HCH CHC  ISO[CHH CIO[h  IHCH{c {oichEU HC IUspdGDEY ECYETB  CEYOe CEYuevuv EYGF", boton: "boton"},
+    {img: '/img/iconos.png', titulo: "Punto clave", parrafo: "Lorem, ipsum dolor sit amet consectetur adipisicing i quo repudiandae optio ullam consequatur esse dignissimos, dolorum totam perferendis illum."},
 
-    {img: '/img/iconos.png', titulo: "Punto clave", parrafo: "HDFUHDH DHFDHFDHF HDHFDHH dhhFHPEFWE EHPFGef uefweue dchdcd hdfdfd sifhEHF CIDCHHASC CIHCSDOH CZO[HCH CHC  ISO[CHH CIO[h  IHCH{c {oichEU HC IUspdGDEY ECYETB  CEYOe CEYuevuv EYGF", boton: "boton"}
+    {img: '/img/iconos.png', titulo: "Punto clave", parrafo: "Lorem, ipsum dolor sit amet molestias excepturi quo repudiandae optio ullam consequatur esse dignissimos, dolorum totam perferendis illum."}
 ]
 ---
 <main>
@@ -25,8 +25,8 @@ const card = [
         </article>
 
             <div class="nose">concepto</div>
-            {card.map(({ img, titulo, parrafo, boton }) =>(
-                <Punto img={img} titulo={titulo} parrafo={parrafo} boton={boton}></Punto>
+            {card.map(({ img, titulo, parrafo}) =>(
+                <Punto img={img} titulo={titulo} parrafo={parrafo} boton="Saber mas"></Punto>
             ))}
             
     </section>
