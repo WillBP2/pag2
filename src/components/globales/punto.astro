@@ -1,0 +1,49 @@
+---
+const { titulo, parrafo, boton, img} = Astro.props
+---
+
+<article class="punto">
+    <div class="cont-i-l">
+        <img src={img} alt="" class="iconos" />
+        <h2 class="titulo">{titulo}</h2>
+    </div>
+    <p class="parrafo">{parrafo}</p>
+    <button class="boton">{boton}</button>
+</article>
+<style>
+    
+     .punto {
+        padding: 25px;
+        background-color: #111111;
+        border-radius: 10px;
+        color: #bfc1c6e0;
+    }
+    .iconos {
+        height: 50px;
+        border-radius: 10px;
+    }
+   
+    .cont-i-l {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .titulo {
+        font-size: 20px;
+        color: #fff;
+        margin: 0;
+    }
+    .boton {
+        width: 30%;
+        padding: 5px;
+        color: #dddddd;
+        font-size: 17px;
+        background-color: #2564eb;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+    }
+    .parrafo {
+        margin-block: 25px;
+    }
+</style>

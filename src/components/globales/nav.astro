@@ -1,0 +1,114 @@
+---
+const links = [
+  { texto: "La universidad", url: "#" },
+  { texto: "Estudiantes de la UTD", url: "#" },
+  { texto: "Información", url: "#" },
+  { texto: "Contacto", url: "#" },
+  { texto: "Más...", url: "#", extra: "color2" }
+];
+---
+
+<header class="header display_flex">
+  <div class="cursor">
+    <span>UTD</span>
+  </div>
+
+  <nav class="nav">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="cursor">
+      <img src="/img/hamburguesa.svg" alt="Abrir menú" class="hambuerguesa" />
+    </label>
+
+    <ul class="navegacion display_flex" id="navegacion">
+      {links.map(({ url, texto, extra }) => (
+        <li class={`navegacion-li ${extra || ""}`}>
+          <a href={url}>{texto}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+.display_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.header {
+  justify-content: space-between;
+  background-color: #000012;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+}
+
+span {
+  color: aliceblue;
+  margin-left: 20px;
+}
+
+.hambuerguesa {
+  height: 30px;
+  padding: 3px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.hambuerguesa:hover {
+  background-color: #131320;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.navegacion {
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #090a24;
+  gap: 10px;
+  position: absolute;
+  top: 46px;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px 0;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.menu-toggle:checked ~ .navegacion {
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.navegacion-li {
+  list-style: none;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.color2 {
+  background-color: #0101196c;
+}
+
+.navegacion-li:hover {
+  background-color: #0101196c;
+  transition: 0.2s;
+}
+
+a {
+  color: #bebfd0;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Courier";
+  font-weight: 900;
+}
+</style>
