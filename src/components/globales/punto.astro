@@ -1,5 +1,5 @@
 ---
-const { titulo, parrafo, boton, img} = Astro.props
+const { titulo, parrafo, boton, img, href} = Astro.props
 ---
 
 <article class="punto">
@@ -8,7 +8,7 @@ const { titulo, parrafo, boton, img} = Astro.props
         <h2 class="titulo">{titulo}</h2>
     </div>
     <p class="parrafo">{parrafo}</p>
-    <button class="boton">{boton}</button>
+    <button class="boton"> <a href={href}>{boton}</a></button>
 </article>
 <style>
     
@@ -45,5 +45,9 @@ const { titulo, parrafo, boton, img} = Astro.props
     }
     .parrafo {
         margin-block: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: #ddd;
     }
 </style>

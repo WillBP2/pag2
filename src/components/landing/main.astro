@@ -2,7 +2,7 @@
 import Card from "../globales/card.astro"
 import Inicio from "../globales/inicio.astro"
 const carsd1 = [
-    {img: '/img/iconos.png', titulo: "Síntesis", parrafo: "La síntesis es un resumen de lo escrito por algún autor, pero, con otras palabras. Se recomienda leer párrafos completos para determinar cuáles son los contenidos esenciales y reescribirlos, sin que..."},
+    {img: '/img/iconos.png', titulo: "Síntesis", parrafo: "La síntesis es un resumen de lo escrito por algún autor, pero, con otras palabras. Se recomienda leer párrafos completos para determinar cuáles son los contenidos esenciales y reescribirlos, sin que...", href: "/estudiantes/sintesis"},
 
     {img: '/img/iconos2.png', titulo: "Mapa Conceptual", parrafo: "Es una representación en forma de diagrama de una cierta cantidad de información de varias formas. Puede ser..."},
 
@@ -13,24 +13,35 @@ const carsd1 = [
     {img: '/img/iconos2.png', titulo: "Análisis de lectura", parrafo: "Es un proceso que se realiza entre el lector y el texto; es dinámico, interactivo y llega a ser un dialogo mental entre lo escrito y el que lo lee. Esto permite..."}
 ]
 
+const carsd2 = [
+    {img: '/img/iconos.png', titulo: "Socialización", parrafo: "La socialización es el proceso mediante el cual el ser humano aprende, en el transcurso de su vida, los elementos socioculturales de su medio ambiente y los integra a la estructura de su personalidad bajo la influencia de experiencias, sucesos y de agentes sociales..."},
 
+    {img: '/img/iconos2.png', titulo: "Estudio de casos", parrafo: "Un estudio de caso es un estudio detallado de un tema especifico. Los estudios de casos se utilizan habitualmente en la investigación social educativa clínica empresarial..."},
+
+    {img: '/img/iconos3.png', titulo: "Taller", parrafo: "Un taller es una modalidad de enseñanza-aprendizaje intensiva y práctica donde los participantes desarrollan habilidades y conocimientos a través de la realización activa de tareas, ejercicios o proyectos específicos, fomentando la interacción y el trabajo colaborativo..."},
+
+    {img: '/img/iconos.png', titulo: "Discusión del tema", parrafo: "Es una variante del seminario. Es una técnica de exploración o investigación cualitativa donde se reúne un pequeño número de personas o equipos guiados por un profesor que facilita la discusión Los alumnos hablan libre y espontáneamente sobre temas que se consideran de importancia para la investigación. Generalmente los alumnos son elegidos por el profesor..."},
+
+    {img: '/img/iconos2.png', titulo: "Proyectos", parrafo: "EI método de proyectos emerge de una visión de la educación en la cual los estudiantes toman una mayor responsabilidad de su propio aprendizaje y en donde aplican, en proyectos reales, las habilidades y conocimientos adquiridos en el salón de clases. El método de proyectos busca enfrentar a los alumnos a situaciones que los lleven a rescatar, comprender y aplicar aquello que aprenden como una herramienta para resolver problemas o proponer mejoras en las comunidades en donde se desenvuelven...."}
+]
 ---
 <main>
     <section class="section-1">
+      
 
         <Inicio titulo_i="Técnicas andragógicas" parrafo_i="La educación se encuentra nutrida de distintas técnicas e instrumentos que proporcionan al docente herramientas útiles y validas, que son importantes de conocer ya que ofrecen formas de evaluación y estrategias en las que el contexto determina y requieren de la participación tanto de estudiantes como de maestros." img_i="/img/Inicio.png"></Inicio>
         
 <article class="carsd1">
     <div class="nose">Técnica andragogicas centradas en el estudiante </div>
-      {carsd1.map(({img, titulo, parrafo}) => (
-           <Card  titulo={titulo} img={img} parrafo={parrafo}></Card>
+      {carsd1.map(({img, titulo, parrafo, href}) => (
+           <Card  titulo={titulo} img={img} parrafo={parrafo} href={href}></Card>
         ))}
 </article>
     </section>
 
         <section class="section-1">
 
-        <Inicio titulo_i="Técnicas andragógicas centradas en grupos" img_i="/img/Inicio.png" parrafo_i="Se presenta una propuesta que lleva a considerar el uso de las técnicas grupales como una herramienta andragógica para la enseñanza del estudiante universitario.Es el resultado de una larga experiencia en la investigación de campo. Se procede a asignar a los estudiantes en grupos de dos o más la tarea de investigar el tema asignado. Para cada subtema se encarga un estudiante, quien adquiere su posición personal del conocimiento adquirido. La sumatoria de los conocimientos adquiridos por parte de cada uno de los componentes del grupo permite crear posiciones personales, de cuya sumatoria se llega a un consenso en el grupo. Para esto se abren las opciones de las preguntas de los otros estudiantes de aula por cuyas participaciones se van construyendo criterios de conocimiento en los modelos mentales de cada estudiante."></Inicio>
+        <Inicio titulo_i="Técnicas andragógicas centradas en grupos" img_i="/img/Tecnicas andragogicas centradas a grupos.png" parrafo_i="Se presenta una propuesta que lleva a considerar el uso de las técnicas grupales como una herramienta andragógica para la enseñanza del estudiante universitario.Es el resultado de una larga experiencia en la investigación de campo. Se procede a asignar a los estudiantes en grupos de dos o más la tarea de investigar el tema asignado. Para cada subtema se encarga un estudiante, quien adquiere su posición personal del conocimiento adquirido. La sumatoria de los conocimientos adquiridos por parte de cada uno de los componentes del grupo permite crear posiciones personales, de cuya sumatoria se llega a un consenso en el grupo."></Inicio>
         
 <article class="carsd1">
     <div class="nose">Técnica andragogicas centradas grupos </div>
