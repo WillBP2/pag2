@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {h3: "¿Qué es?", p: "Es un proceso que se realiza entre el lector y el texto; es dinámico, interactivo y llega a ser un dialogo mental entre lo escrito y el que lo lee. Esto permite identificar dos consecuencias pedagógicas bastante importantes: <br><br>a) los conocimientos previos del estudiante, indispensables para establecer el diálogo,<br><br>b) La actitud de diálogo mientras se lee; imprescindibles para captar. comprender y valorar los significados."},
+
+      
+      {h3: "¿Para qué se usa?",p:"Aprender a analizar una lectura permite lo siguiente:<br><br> Realizar una valoración critica, lo que le permite manifestarse de acuerdo o en desacuerdo mientras dialoga con su lectura, esto con el objetivo de reflexionar sobre si mismo y el mundo que lo rodea. Usar la información, es decir poder conectar y transferir la información obtenida a situaciones concretas en donde se pueda aplicar los nuevos conocimientos. Leer para aprender"},
+
+      {h3: "Realización:", p: "El maestro indica que se espera al hacer la lectura, establece los objetivos, indica cómo se presentará el informe, por ello se debe tomar en cuenta los siguientes pasos: <br><br>• Interesar a los lectores en lo que leerán, con una idea; puede ser clara, precisa, vaga, pero idea al fin. <br><br>• Seleccionar la información clave para construir el significado del texto Dialogar con el texto mentalmente para hacer una efectiva comprensión del mismo. <br><br>• Organizar la mente a través de imágenes, para que recoja la esencia de lo leído, es hacer un resumen mental."},
+
+      {h3: "Recursos humanos:", p: "• Docente y estudiantes "},
+
+      {h3: "Recursos materiales: ", p: "• Hojas de papel <br><br>• Lápices, lapiceros<br><br>• Cuaderno<br><br>• Libro, textos, artículos<br><br>• Cañonera<br><br>• Computadora<br><br>• Escritorios<br><br>• Sillas<br><br>• Fotocopias"},
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en el estudiante </h1>
+          <h2>Análisis de lecturas </h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

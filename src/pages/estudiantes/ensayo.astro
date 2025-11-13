@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {h3: "¿Qué es?", p: "Es una composición escrita que se escribe con lenguaje escrito directo, sencillo y coherente y que es el resultado de un proceso personal que implica diseñar, investigar, ejecutar y revisar el escrito. La extensión y complejidad de un ensayo depende de varios factores entre ellos: la edad de los estudiantes, el grado que cursan, el tema, las posibilidades para obtener información entre otros."},
+
+      
+      {h3: "Objetivos de la técnica:",p:"• Comunicar las ideas propias del autor de una manera sencilla, en forma <br><br>• Directa y libre, se deben seguir las reglas de redacción para elaborarlo <br><br>• Escribir las ideas para poder publicarlas con mayor facilidad, para tener mayor número de lectores y producir un efecto más directo de la idea que se quiere dar a conocer."},
+
+      {h3: "Recomendaciones:", p: "Es importante que, al realizar un ensayo, conozca y se enriquezca de información externa, para luego afianzar sus conocimientos relacionados con lo investigado; de esta manera presentará un trabajo basado en su experiencia y a la vez acompañado de información verídica con relación al tema."},
+
+      {h3: "Recursos humanos:", p: "• Participantes y facilitador."},
+
+      {h3: "Materiales: ", p: "• Computadora (Internet y plataforma) <br><br>• O en su defecto hojas blancas y lapiz"},
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en el estudiante </h1>
+          <h2>Ensayo</h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {h3: "¿Qué es?", p: "La infografía es una fusión de imágenes y textos que facilitan el entendimiento de un tema especifico con el fin de comunicar información. Esta información(gráfica), en su mayoría debe de cumplir con ciertos parámetros que faciliten la interpretación del tema central en el lector. <br><br>La representación gráfica en una infografía es la que más debe de prevalecer, siendo en menos porcentaje el elemento texto, ya que las imágenes deben de brindar un mensaje directo o específico."},
+
+      
+      {h3: "¿Para qué sirve?",p:"La finalidad de una infografía es informar o explicar de una manera fácil temas complejos, esto se logra mediante la interpretación de la forma gráfica que pueda incluirse en la elaboración de la misma."},
+
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en el estudiante </h1>
+          <h2>Infografía</h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

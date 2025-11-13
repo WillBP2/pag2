@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {h3: "¿Qué es?", p: "Es una representación en forma de diagrama de una cierta cantidad de información de varias formas. Puede ser elaborado en forma individual o en grupo. Puede tener diferentes formas dependiendo el contenido y el objetivo de la elaboración. <br><br> El conocido como Araña en donde se observa un concepto al centro y otros relacionados alrededor. Otra forma es el mapa lineal o secuencial, donde se muestra una serie de pasos para lograr un objetivo. <br><br>La más común es la jerarquía en donde el concepto principal está en la parte superior y de él se desprenden las diferentes categorías."},
+
+     {h3: "¿Cómo se elabora?", p: "1. Ordene la información (conceptos) de lo más general a lo más específico. <br><br>2. Escriba el concepto más general, amplio inclusivo arriba o al centro (preferiblemente). Colocarlo dentro de una figura. <br><br>3. Conecte los conceptos por medio de líneas o flechas. <br><br>4. Incluya la palabra o idea conectiva sobre las líneas de unión. <br><br>5. Incluya ejemplos."},
+
+      {h3: "¿Cómo se evalúa?", p: "Para evaluar el mapa conceptual se asigna un punteo con base en lo anotado en el instrumento de evaluación."},
+
+      
+      {h3: "Objetivos de la técnica:", p: "Aprender términos y hechos, prácticas sobre el uso de gráficas, sintetizar e integrar información. <br><br>Identificar una visión global con la conexión entre los términos y mejorar sus habilidades creativas y de memoria a largo plazo. "},
+
+      {h3: "Recomendaciones:", p: "• Al realizar la técnica es importante tomar en cuenta los siguientes aspectos: <br><br>• Que estén expuestos los conceptos más importantes <br><br>• Se establecen relaciones entre conceptos y son aceptables. <br><br>• Se jerarquizan los conceptos o el diagrama en forma lógica <br><br>• Se utilizan proposiciones y palabras conectivas apropiadas.<br><br>• Que se tome en cuenta un mínimo de conceptos apropiados e incluye ejemplos pertinentes."},
+
+      {h3: "Recursos humanos:", p: "• Participantes y facilitador <br><br>• Materiales: <br><br>• Computadora (Internet y plataforma)"},
+
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en el estudiante </h1>
+          <h2>Mapa conceptuales</h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

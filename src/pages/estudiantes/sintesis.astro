@@ -1,6 +1,54 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {h3: "¿Qué es?", p: "La síntesis es un resumen de lo escrito por algún autor, pero, con otras palabras. Se recomienda leer párrafos completos para determinar cuáles son los contenidos esenciales y reescribirlos, sin que se pierdan las conexiones entre las ideas principales del autor. Puede anotarse palabras claves o realizar una síntesis de lo leído. Otra posibilidad es acudir al subrayado de las ideas principales."},
+
+     {h3: "¿Para qué sirve?", p: "Para comunicar ideas principales acerca de una investigación se deben cuidar las reglas de redacción para elaborarlo, escribir las ideas principales con la interpretación personal de quien lo elabora."},
+
+      {h3: "¿Cómo se elabora?", p: "1. Primero es necesario leer tantas veces como sea posible hasta estar seguro De haber comprendido lo leído. <br><br> 2. Se hace una segunda lectura en la subrayan las ideas centrales. <br><br> 3. Se debe analizar el texto tomando nota de lo más importante y eliminar la Información poco relevante. <br><br> 4. Redactar el informe final con base a la interpretación personal (Parafraseada, estructurada y enriquecida)."},
+
+      {h3: "¿Cómo se evalúa?", p: "Para evaluarlo se asignará un punteo en base a lo anotado en el instrumento de. <br><br> Evaluación por medio de un medidor como instrumento de evaluación."},
+
+      
+      {h3: "Objetivos de la técnica:", p: " • Comunica ideas principales acerca de una investigación. <br> <br>• Se redacta el informe final en base a la interpretación personal del lector. • Analizar el texto tomando nota de lo más importante."},
+
+      {h3: "Recomendaciones:", p: "Se considera importante el uso de la síntesis para mejorar el análisis de una."},
+
+      {h3: "Investigación:", p: "Los estudiantes deben conocer y manejar el uso de estas técnicas para su mejor comprensión y aplicación que permitirá comprender de mejorar manera los conocimientos adquiridos."},
+
+      {h3: "Investigación:", p: "Los estudiantes deben conocer y manejar el uso de estas técnicas para su mejor comprensión y aplicación que permitirá comprender de mejorar manera los conocimientos adquiridos. <br><br>Se recomienda hacer énfasis en las fortalezas y en los aspectos positivos que adquieren los estudiantes al utilizar las técnicas propuestas en el presente modulo. <br><br>El uso de las técnicas puede ser utilizada por cualquier estudiante pues toma en cuenta los diferentes estilos de aprendizaje, las capacidades lingüísticas, las experiencias culturales y educativas de los estudiantes por medio de la aplicación de síntesis, ensayos, mapas conceptuales, infografías lo cual les permitirá mejorar los análisis de las lecturas consultadas."},
+
+      {h3: "Descripción del trabajo:", p: "Elabora una síntesis con el tema de Educación Bilingüe intercultural recuerda que la síntesis es el informe final de la interpretación personal del lector. <br><br>Lee la lectura dos veces como mínimo recuerda tomar en cuenta las ideas principales y elimina lo poco relevante. <br><br>Por último, redacta el informe final, resumen o síntesis del tema seleccionado. <br><br>Cuida la ortografía y redacción en base a la interpretación personal. <br><br>Recursos Humanos: <br><br>• Estudiante <br><br>• Maestro <br><br>• Recursos didácticos: <br><br>• Computadora Cuaderno <br><br>• Libros <br><br>• Lapiceros. Hojas"},
+
+
+]
 ---
 <Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en el estudiante </h1>
+          <h2>Síntesis</h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
     
 </Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>
