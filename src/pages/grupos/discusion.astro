@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    
+
+    {p: "Es una variante del seminario. Es una técnica de exploración o investigación cualitativa donde se reúne un pequeño número de personas o equipos guiados por un profesor que facilita la discusión.<br><br>Los alumnos hablan libre y espontáneamente sobre temas que se consideran de importancia para la investigación. Generalmente los alumnos son elegidos por el profesor."},
+
+      
+    {h3: "Principales usos:", p: "La reunión de grupos focales suministra información sobre los conocimientos, actitudes y percepciones de los alumnos."},
+
+    {h3: "Ventajas:", p: "• Esta técnica permite abarcar contenidos amplios en un tiempo relativamente corto.<br><br>• Desarrolla las habilidades de expresión oral en los alumnos.<br><br>• Promueve la participación e interacción de los alumnos<br><br>."},
+
+    {h3: "Desventajas:", p: "• No es útil para grupos muy numerosos, la participación del grupo puede resultar mínima pues la exposición no permite aprovechar las diferencias individuales y la comunicación oral se da en un solo sentido: del expositor al grupo.<br><br>• Los equipos de trabajo debe estar capacitados para desarrollar técnicas de investigación.<br><br>• No se recomienda para grupos sin experiencia previa en trabajo en equipos."},
+
+    {h3: "Cómo se aplica:", p: "Los participantes desempeñarán las siguientes atribuciones:<br><br>a) Profesor: Utiliza una guía de discusión para dirigir el grupo, presenta adecuadamente las preguntas, responde neutralmente a los comentarios, estimula la participación del grupo y observa las reacciones de los alumnos.<br><br>b) Relator: Anota las respuestas.<br><br>c) Observadores: Apoyan al relator anotando las respuestas pero principalmente<br><br>observan el proceso.<br><br>c) Alumnos: Que los miembros del equipo presenten las mismas características."},
+
+    {h3: "Diseño de la guía de discusión:", p: "a) Definir el objetivo (debe ser breve, claro y conciso).<br><br>b) Definir el preámbulo (delimita el tema u objeto de estudio y promueve la conversación).<br><br></br>c) Elaborar el cuestionario de preguntas de discusión abierta, se debe llevar a cabo en secuencia lógica, fácil de comprender y en coherencia con los objetivos.<br><br>1.El profesor da la bienvenida a los alumnos, presenta el preámbulo, da Instrucciones generales y ubica al grupo en el debate.<br><br>2.El profesor formula la primera pregunta e invita a participar. En el caso de que nadie hablara, el profesor puede estimular las respuestas por medio del recurso da la “respuesta anticipada”, que consiste en contestar uno mismo insinuando algunas alternativas posibles. Esto da pie para que los presentes acepten o rechacen las sugerencias, con lo cual comienza el debate.<br><br>3.Una vez en marcha el debate, el profesor lo guía prudentemente cuidando de no ejercer presiones y de no intimidar. Es más importante la elaboración mental y las respuestas espontaneas del grupo que obtener la respuesta que se desea<br><br>4.El profesor prestará atención no sólo al desarrollo del contenido que se debate, sino también a las actitudes de los miembros y detalles del desarrollo del proceso de grupo. Distribuirá convenientemente el uso de la palabra alentando a los tímidos. Observará las posibles inhibiciones o dificultades que se presenten, y si lo cree conveniente para la marcha del debate las manifestará a los equipos.<br><br>5.El profesor-facilitador no debe participar en el debate del tema; su función es la de conducir, guiar, estimular. Mantendrá siempre una actitud cordial y serena que servirá de apoyo, sobre todo en los momentos de acaloramiento de quienes están intelectual y emocionalmente entregados a la discusión. Admitirá todas las opiniones, pues ningún alumno debe sentirse rechazado o menospreciado. Su función es la de conducir al grupo hacia ideas valiosas.<br><br>6.El relator y los observadores anotan las respuestas de los alumnos.<br><br>7.Se analiza la información recabada por el relator y los observadores y se obtienen conclusiones."},
+
+     {h3: "Sugerencias:", p: "•Debe tenerse en cuenta que con los equipos grandes se obtienen más ideas y con los más pequeños se profundiza en el tema.<br><br>• Las reuniones no deben durar más de dos horas.<br><br>• Se debe seleccionar un lugar en el aula donde los alumnos puedan hablar en privado, evitando zonas ruidosas para que puedan ser escuchados por el profesor y el relator.<br><br>• La discusión se debe conducir en forma de diálogo abierto en el que cada participante pueda comentar, preguntar y responder a los comentarios de los demás, incluyendo las del profesor-facilitador.<br><br>• Los alumnos deben sentarse a la misma distancia del profesor y dentro del campo de visión de los demás alumnos.<br><br>Como apoyos pueden utilizarse observadores, grabación, si es posible vídeo."},
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en grupos </h1>
+          <h2>Discusión del tema:</h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

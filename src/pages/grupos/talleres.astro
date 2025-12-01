@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {p: "El estudio es una forma de trabajo y, como todo trabajo, requiere un aprendizaje.<br><br>Aprender a estudiar no es más fácil ni más difícil que el resto de los aprendizajes que realizamos a lo largo de nuestra vida.<br><br>Está demostrado que el fracaso en el estudio, en gran parte, es debido a que el alumno o alumna no sabe estudiar, ni le han enseñado, y como somos conscientes de ello, es por lo que hemos pensado que ofrecerles y trabajar con ellos/as un taller de técnicas de estudios puede ser altamente positivo.<br><br>Las páginas que siguen a continuación van a intentar modificar las inadecuadas técnicas que utilizan (en muchas ocasiones éstas ni existen), y los malos o pocos hábitos que poseen en favor de una serie de aptitudes y actitudes que les permitan obtener un mayor rendimiento y mejores resultados reforzando y estimulando así su autoestima."},
+
+      
+    {p:"El taller es eminentemente práctico, a cada reseña teórica le suceden una serie de textos y ejercicios para que los alumnos y alumnas lo trabajen, contribuyendo esto a reforzar la teoría.<br><br>Todos los textos que aparecen en este taller son susceptibles de cambio, por parte del formador o formadora, que imparta el mismo, pues somos conscientes de que algunos de ellos quizás no sean demasiado atractivos para los alumnos por su contenido. Sin embargo, está claro que deben trabajar todo tipo de temas y contenidos, pues no podemos ni debemos limitarnos única y exclusivamente a aquello que a los/as alumnos/as les pueda llamar su atención, ya que a nosotros nos toca completarles una formación general que les permita incorporarse a la vida activa e integrarse plenamente en la sociedad."},
+
+    {h3: "Objetivo:", p: "• Sensibilizar a los y las jóvenes sobre la importancia del estudio para el aprendizaje.<br><br>• Conocer las condiciones y destrezas que intervienen en la tarea de estudiar.<br><br>• Conocer el método y las técnicas que aumentan el rendimiento en el estudio.<br><br>• Entrenarse en el uso de las técnicas de estudio.<br><br>• Entrenarse en el empleo de un método adaptado a las circunstancias personales de cada persona.<br><br>• Aplicar las técnicas aprendidas al estudio personal.<br><br>• Aplicar el estudio personal a las diferentes áreas."},
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en grupos </h1>
+          <h2>Talleres </h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

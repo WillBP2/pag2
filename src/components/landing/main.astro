@@ -14,15 +14,15 @@ const carsd1 = [
 ]
 
 const carsd2 = [
-    {img: '/img/iconos.png', titulo: "Socialización", parrafo: "La socialización es el proceso mediante el cual el ser humano aprende, en el transcurso de su vida, los elementos socioculturales de su medio ambiente y los integra a la estructura de su personalidad bajo la influencia de experiencias, sucesos y de agentes sociales..."},
+    {img: '/img/iconos.png', titulo: "Socialización", parrafo: "La socialización es el proceso mediante el cual el ser humano aprende, en el transcurso de su vida, los elementos socioculturales de su medio ambiente y los integra a la estructura de su personalidad bajo la influencia de experiencias, sucesos y de agentes sociales..." , href: "/grupos/socializacion"},
 
-    {img: '/img/iconos2.png', titulo: "Estudio de casos", parrafo: "Un estudio de caso es un estudio detallado de un tema especifico. Los estudios de casos se utilizan habitualmente en la investigación social educativa clínica empresarial..."},
+    {img: '/img/iconos2.png', titulo: "Estudio de casos", parrafo: "Un estudio de caso es un estudio detallado de un tema especifico. Los estudios de casos se utilizan habitualmente en la investigación social educativa clínica empresarial...", href: "/grupos/estudio"},
 
-    {img: '/img/iconos3.png', titulo: "Taller", parrafo: "Un taller es una modalidad de enseñanza-aprendizaje intensiva y práctica donde los participantes desarrollan habilidades y conocimientos a través de la realización activa de tareas, ejercicios o proyectos específicos, fomentando la interacción y el trabajo colaborativo..."},
+    {img: '/img/iconos3.png', titulo: "Taller", parrafo: "Un taller es una modalidad de enseñanza-aprendizaje intensiva y práctica donde los participantes desarrollan habilidades y conocimientos a través de la realización activa de tareas, ejercicios o proyectos específicos, fomentando la interacción y el trabajo colaborativo..." , href: "/grupos/talleres"},
 
-    {img: '/img/iconos.png', titulo: "Discusión del tema", parrafo: "Es una variante del seminario. Es una técnica de exploración o investigación cualitativa donde se reúne un pequeño número de personas o equipos guiados por un profesor que facilita la discusión Los alumnos hablan libre y espontáneamente sobre temas que se consideran de importancia para la investigación. Generalmente los alumnos son elegidos por el profesor..."},
+    {img: '/img/iconos.png', titulo: "Discusión del tema", parrafo: "Es una variante del seminario. Es una técnica de exploración o investigación cualitativa donde se reúne un pequeño número de personas o equipos guiados por un profesor que facilita la discusión Los alumnos hablan libre y espontáneamente sobre temas que se consideran de importancia para la investigación. Generalmente los alumnos son elegidos por el profesor...", href: "/grupos/discusion"},
 
-    {img: '/img/iconos2.png', titulo: "Proyectos", parrafo: "EI método de proyectos emerge de una visión de la educación en la cual los estudiantes toman una mayor responsabilidad de su propio aprendizaje y en donde aplican, en proyectos reales, las habilidades y conocimientos adquiridos en el salón de clases. El método de proyectos busca enfrentar a los alumnos a situaciones que los lleven a rescatar, comprender y aplicar aquello que aprenden como una herramienta para resolver problemas o proponer mejoras en las comunidades en donde se desenvuelven...."}
+    {img: '/img/iconos2.png', titulo: "Proyectos", parrafo: "EI método de proyectos emerge de una visión de la educación en la cual los estudiantes toman una mayor responsabilidad de su propio aprendizaje y en donde aplican, en proyectos reales, las habilidades y conocimientos adquiridos en el salón de clases. El método de proyectos busca enfrentar a los alumnos a situaciones que los lleven a rescatar, comprender y aplicar aquello que aprenden como una herramienta para resolver problemas o proponer mejoras en las comunidades en donde se desenvuelven....", href: "/grupos/proyectos"}
 ]
 ---
 <main>
@@ -45,8 +45,8 @@ const carsd2 = [
         
 <article class="carsd1">
     <div class="nose">Técnica andragogicas centradas grupos </div>
-      {carsd2.map(({img, titulo, parrafo}) => (
-           <Card  titulo={titulo} img={img} parrafo={parrafo}></Card>
+      {carsd2.map(({img, titulo, parrafo, href}) => (
+           <Card  titulo={titulo} img={img} parrafo={parrafo} href={href}></Card>
         ))}
 </article>
     </section>

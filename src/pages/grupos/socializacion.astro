@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {h3: "¿Qué es?", p: "La socialización es el proceso mediante el cual el ser humano aprende, en el transcurso de su vida, los elementos socioculturales de su medio ambiente y los integra a la estructura de su personalidad bajo la influencia de experiencias, sucesos y de agentes sociales."},
+
+      
+      {h3: "Descripción de la técnica:",p:"A través de una capacitación se promoverá socialización entre los estudiantes en donde conjunta y colaborativamente se enfatizará en el valor de responsabilidad"},
+
+      {h3: "Objetivo:", p: "Fomentar el valor de responsabilidad a través de diversas fases capacitación."},
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en grupos</h1>
+          <h2>Socialización </h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

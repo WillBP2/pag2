@@ -1,0 +1,58 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+
+    {h3: "¿Qué es?", p: "Un estudio de caso es un estudio detallado de un tema especifico. Los estudios de casos se utilizan habitualmente en la investigación social educativa clínica empresarial. <br><br>El diseño de la investigación de un estudio de caso suele incluir métodos cualitativos, pero a veces también se utilizan métodos cuantitativos.<br><br>Los estudios de casos sirven para describir, comparar, evaluar y comprender diferentes aspectos de un problema de investigación"},
+
+    {h3: "Pasos para hacer un estudio de caso:",p:"Un estudio de caso es un diseño de investigación adecuado cuando se desea obtener un conocimiento concreto, contextual y a profundidad sobre un tema especifico. Permite explorar las características, significados e implicaciones clave del caso.<br><br>Los estudios de caso mantienen tu proyecto centrado y manejable cuando no tienes tiempo o recursos para hacer una investigación a gran escala.<br><br>Puedes utilizar un solo estudio de caso complejo en el que explores un solo tema en profundidad, o realizar varios estudios de caso para comparar e iluminar diferentes aspectos de tu problema de investigación."},
+
+    {h3: "Ahora que ya sabemos qué es un estudio de caso, conozcamos los pasos para realizarlo:"},
+
+    {h3: "• Paso 1: Seleccionar un caso",p:"Una vez que hayas desarrollado el planteamiento del problema y las preguntas de investigación, deberías elegir el caso específico en el que deseas centrarte.<br><br>Un buen estudio de caso debe tener el potencial de:<br><br>• Proponer medidas prácticas para resolver un problema<br><br>• Abrir nuevas vías de investigación.<br><br>• En el caso de hacer un estudio de caso de tus clientes, checa con el áres correspondiente, ya sea de atención o customer success cuáles son los clientes potenciales con los que podrías trabajar para obtener su testimonio.<br><br>"},
+
+    {h3: "• Paso 2: Recopila los datos",p:"Hay muchos métodos de investigación que puedes utilizar para recoger datos sobre tu estudio de caso.<br><br>Los estudios de casos tienden a centrarse en los datos cualitativos utilizando métodos como las entrevistas, las observaciones y el análisis de fuentes primarias y secundarias (por ejemplo, artículos de prensa, fotografías, registros oficiales).<br><br>A veces, un estudio de caso también recoge datos cuantitativos, por ejemplo, a través de encuestas en línea, donde también puedes hacer uso de preguntas abiertas para obtener la visión cualitativa que requieres."},
+
+     {h3: "• Paso 3: Redacta un resumen",p:"Ten siempre en cuenta que los usuarios de Internet son personas con prisa: no todos tendrán tiempo de leer su estudio de caso en su totalidad (o, al menos, no de inmediato), un resumen ejecutivo es imprescindible para que todo el mundo pueda hacerse una vaga idea de lo que trata tu estudio de caso y, lo que es más importante, de los resultados.<br><br>Incluso puedes crear material para descargar donde haya mas material que pueda ser consultado."},
+
+     {h3: "• Paso 4:Presenta al cliente",p:"Si bien el estudio de caso está pensado para servir a tu empresa, no debes robarle el protagonismo al cliente cuya historia estás contando <br><br>Presenta al cliente de la mejor manera posible, aunque sólo sea para agradecerle que haya aceptado contribuir a tu contenido."},
+
+     
+     {h3: "• Paso 5: Muestra los desafíos a superar ",p:"Este paso es crucial: Se trata de describir, en 2 o 3 párrafos, el contexto en el que se encontraba el cliente y las razones por las que recurrió a ti. <br><br>Lo ideal es que esta sección dé la palabra al principal interesado, que puede explicar directamente los problemas que ha encontrado antes de recurrir a tus servicios o productos.<br><br>Esta es también una oportunidad para mencionar los objetivos que el cliente quería alcanzar (por ejemplo: aumentar las ventas en un 10%, aumentar el tráfico del blog etc.)<br><br>Esta es una de las grandes razones para conocer qué es un estudio de caso e implementarlo como contenido de referencia para tus otros prospectos o clientes."},
+     
+     {h3: "• Paso 6: Muestra las soluciones aportadas",p:"Ahora es el momento de hablar de lo que realmente hiciste para ayudar a tu cliente, esto es precisamente lo más importante, saber cómo has resuelto un problema que otros podrían tener.<br><br>Esta es una oportunidad para exponer, con pruebas, las ventajas de tus productos o servicios y cómo resolvieron el problema del cliente.<br><br>Explica también cómo has puesto en práctica tu solución y has superado los retos.<br><br>Y limitaciones."},
+
+     {h3: "• Paso 7: Comparte los resultados obtenidos",p:"Ahora que has explicado tu enfoque y has destacado las cualidades de tu solución, tienes que demostrar que realmente funciona: Aquí es donde puede demostrar realmente tu experiencia.<br><br>Enumera todos los efectos positivos que tus productos o servicios han tenido en tus<br><br>Clientes, con testimonios de ellos que respalden sus afirmaciones.<br><br>Y lo que es más importante, haz un balance de lo bien que has cumplido o superado las expectativas consiguiendo resultados aún mejores, es esencial que demuestres tu capacidad para cumplir los objetivos que te has marcado."},
+
+      {h3: "• Paso 8: La conclusión",p:"Puedes aprovechar la conclusión de tu estudio de caso para dar las gracias al cliente que amablemente aceptó participar, pero también para repasar los puntos principales del estudio y tus logros.<br><br>Mejor aún, invita a tus lectores a llamarte si se encuentra en una situación similar a la del cliente sobre el que ha escrito."},
+
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en grupos</h1>
+          <h2>Estudio de caso</h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

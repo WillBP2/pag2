@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    
+
+    {p: "EI método de proyectos emerge de una visión de la educación en la cual los estudiantes toman una mayor responsabilidad de su propio aprendizaje y en donde aplican, en proyectos reales, las habilidades y conocimientos adquiridos en el salón de clases.<br><br>El método de proyectos busca enfrentar a los alumnos a situaciones que los lleven a rescatar, comprender y aplicar aquello que aprenden como una herramienta para resolver problemas o proponer mejoras en las comunidades en donde se desenvuelven.<br><br>Cuando se utiliza el método de proyectos como estrategia, los estudiantes estimulan sus habilidades más fuertes y desarrollan algunas nuevas. Se motiva en ellos el amor por el aprendizaje, un sentimiento de responsabilidad y esfuerzo y un entendimiento del rol tan importante que tienen en sus comunidades."},
+
+      
+    {h3: "Los estudiantes buscan soluciones a problemas no triviales al:", p: "• Hacer y depurar preguntas<br><br>• Debatir ideas<br><br>• Hacer predicciones.<Br><br>• Diseñar planes y/o experimentos<br><br>• Recolectar y analizar datos.<br><br>• Establecer conclusiones<br><br>• Comunicar sus ideas y descubrimientos a otros.<br><br>• Hacer nuevas preguntas.<br><br>• Crear artefactos (Blumenfeld y otros, 1991)."},
+
+    {h3: "El método de proyectos puede ser definido como:", p: "Un conjunto de atractivas experiencias de aprendizaje que involucran a los estudiantes en proyectos complejos y del mundo real a través de los cuales desarrollan y aplican habilidades y conocimientos.<br><br>Una estrategia que reconoce que el aprendizaje significativo lleva a los estudiantes a un proceso inherente de aprendizaje, a una capacidad de hacer trabajo relevante y a una necesidad de ser tomados seriamente, un proceso en el cual los resultados del programa de estudios pueden ser identificados fácilmente, pero en el cual los resultados del proceso de aprendizaje de los estudiantes no son predeterminados o completamente predecibles. Este aprendizaje requiere el manejo, por parte de los estudiantes, de muchas fuentes de información y disciplinas que son necesarias para resolver problemas o contestar preguntas que sean realmente relevantes. Estas experiencias en las que se ven involucrados hacen que aprendan a manejar y usar los recursos de los que disponen como el tiempo y los materiales, además de que desarrollan y pulen habilidades."},
+
+]
+---
+<Layout>
+
+    
+    <section class="section_1_sintesis">
+        <h1>Técnicas andragógicas centradas en grupos </h1>
+          <h2>Proyectos</h2>
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
+
+    </section>
+
+    
+</Layout>
+
+<style>
+    * {
+        color: aliceblue;
+        margin: 0;
+    }
+    .section_1_sintesis {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>
