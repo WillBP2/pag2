@@ -17,11 +17,9 @@ const carpag = [
 
 <Layout>
     <section class="uni">
-    {carpag.map(({p}) =>(
-
-        <CardPag p={p}></CardPag>
-        
-    ))}
+        {carpag.map(({h3, p}) =>(
+            <CardPag h3={h3} p={p}></CardPag>
+        ))}
     </section>
 
     
