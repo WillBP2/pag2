@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {p: 'La Universidad Territorial Deltaica "Francisco Tamayo" enfrenta un desafío crítico en su calidad académica, caracterizado por la contratación de profesores que, si bien poseen conocimiento técnico, carecen de la certificación legal y la formación metodológica esencial en andragogía (la ciencia de la enseñanza a adultos). Esta deficiencia genera una brecha significativa en la transferencia de conocimiento, resultando en un impacto negativo directo sobre el alumnado: bajos niveles de desarrollo de habilidades, desmotivación crónica y estrés académico. Para mitigar esta situación de raíz, la universidad propone la implementación de una Plataforma Digital de Recursos de desarrollo profesional continuo. Los resultados esperados de esta iniciativa transformadora son altamente positivos y se centran en la mejora integral de la función docente. En esencia, la plataforma no solo subsana una deficiencia legal y formativa, sino que establece un plan de crecimiento constante, asegurando que el proceso de enseñanza-aprendizaje en la UTDFT se adapte efectivamente a las necesidades del estudiante adulto.'},   
+]
+
+---
+
+<Layout>
+    <section class="uni">
+    {carpag.map(({p}) =>(
+
+        <CardPag p={p}></CardPag>
+        
+    ))}
+    </section>
+
+    
+</Layout>
+
+<style>
+
+    
+    .uni {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>

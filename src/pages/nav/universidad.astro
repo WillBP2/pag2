@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPag from "../../components/globales/card_pag.astro";
+
+const carpag = [
+    {p: "El antecedente institucional de la Universidad Territorial Deltaica Francisco Tamayo, está en la creación del Instituto Universitario de Tecnología Dr. Delfín Mendoza, acto transcendental para la historia de la educación en el estado Delta Amacuro y el oriente de Venezuela, que fue posible gracias al decreto presidencial número 2719, publicado en la Gaceta Oficial de la República de Venezuela Nº 34.140 del 19 de Enero de 1989, siendo presidente Jaime Lusinchi. Previo a tal acto administrativo, el Consejo Nacional de Universidades (CNU), en su sesión ordinaria del 28 de noviembre de 1988, había emitido favorable, para proceder a la creación del Instituto Universitario. "},   
+
+    {p: "Los momentos promocionales que hicieron posible que esto ocurriera y comprobada la necesidad de atender en el Delta Amacuro la situación de bachilleres que se encontraban impedidos de ir a otras ciudades del país a estudiar carreras profesionales, en particular para el nivel de técnico superior, vital en ese momento, para apoyar los planes de desarrollo local y regional. “En mayo de 1984, el gobernador del estado Delta Amacuro, Dr. Manuel Gómez Rosas, convocó a su despacho a un grupo de educadores de los diferentes niveles y modalidades, en donde se nombraron delegados para realizar un estudio de factibilidad sobre un instituto de educación superior en el estado” (Urrieta, 2016, p. 1).  "},  
+
+    {p: "En 1987, logra constituirse la denominada: Comisión promotora para la creación del instituto en el Delta Amacuro, integrada por los profesores: Abraham Gómez, Hernán Vásquez, Celestino Gómez, Zenaida de Cabral y José Moreno (Ídem). Luego, en febrero 1989 se conforma e instala la que fungiría como comisión organizadora, a ésta se integraron: Abraham Gómez (quien tuvo el alto honor de presidirla), Zenaida de Cabral, Aixa Boyer, Pedro Carvajal y Celestino Gómez. Este hito histórico hizo posible, que luego de tanto esperar, entre el 25 julio y el 15 de agosto del mismo, se diera al registro que permitirá realizar el primer concurso por oposición para el personal académico que formaría parte de la histórica institución deltana de educación universitaria.  "},
+
+    {p: "Como instituto dependiente del Estado a través del ente rector correspondiente, el Ministerio de Educación cursó autorización para proceder, en consecuencia, con la respectiva evaluación y así disponer el personal ordinario de carácter académico, que sería incorporado al Instituto Universitario de Tecnología Delfín Mendoza. En esta primera experiencia de vida universitaria, docentes del Instituto Universitario de Tecnología del Tigre, estado Anzoátegui; del Instituto Universitario Politécnico de Guayana, estado Bolívar y del Instituto Universitario de Caracas, constituyeron el jurado examinador nacional. "},
+
+    {p: "En Septiembre de 1989, fueron nombrados como autoridades del Instituto Universitario de Tecnología Dr. Delfín Mendoza de Tucupita, los siguientes Docentes; Abraham Gómez, como director; Manuel Aristimuño, como sub-director académico y Celestino Gómez, como sub-director administrativo. Valga destacar, que e l 22 de septiembre 1989 se realiza la inauguración del Instituto Universitario de Tecnología Dr. Delfín Mendoza en acto solemne realizado en el auditórium Aoriwakanoco de Tucupita. Se inicia el 25 septiembre de 1989, las actividades académicas con un curso propedéutico de una duración de ocho semanas, lo que, permitió ampliar los conocimientos de los bachilleres en las áreas de biología, física, matemática, lengua y comunicación entre otras (Urrieta, 2016). "},
+
+    {p: "El 30 de Julio de 1993, egresa la I Promoción de TSU, con un total de 236 egresados de las carreras de acuicultura, administración, fitotecnia, turismo y zootecnia, del I.U.T. Dr. Delfín Mendoza, el acto académico fue realizado en el auditorio Aoriwakanoco de Tucupita. Históricamente, el 12 de Octubre de 1994, egresa la II promoción de TSU, epónimo Dr. Félix Adam, nativo de esta región y unos de los baluartes de la educación venezolana. En total son 120 nuevos profesionales que son formados en la universidad, para integrarse al campo laboral en el estado Delta Amacuro y otros estados que conforman la geografía nacional. Y el 26 de Julio de 1996, egresa la I Promoción de Enfermería.   "},
+
+    {p: "A partir de Enero de 1996, las actividades del I.U.T. Dr. Delfín Mendoza se expanden hacia otras regiones del país, cuando el Ministerio de Agricultura y Cría le cede al I.U.T, en comodato con una duración de 20 años, 852 hectáreas del Centro de Cría ubicado en la isla de Guara, estado Monagas, para realizar tareas de investigación, docencia, extensión y producción"},
+
+    {p: "El 10 de Febrero del año 1999, renuncia al cargo de Director del I.U.T, el profesor Manuel Aristimuño Torres, y asume el cargo el Profesor Gerardo Elías Núñez, según decreto N°30, quedando ratificada en su cargo como Sub-Directora Académica; Lic. Nancy de Ordaz y como Sub-Directora Administrativa la Lic. Elizabeth de Hernández, logrando un proceso de transformación académica, que comprendió la actualización del currículo y planes de estudios, adaptándolos al estado actual del conocimiento y a las necesidades cambiantes de la región. "},
+
+    {p: "El 04 de Mayo de 1999, inicia el estudio de las nuevas carreras en el cual participaron un grupo de profesores, orientados por Nancy de Ordaz, Sub-Directora Académica. Entre las carreras se contaban: administración fiscal y tributaria, construcción civil, contaduría pública, educación mención educación física y deportes y educación integral, y tecnología agropecuaria en las menciones de producción vegetal y producción animal. "},
+
+    {p: "Para el 21 de Diciembre de 1999, por Resolución del Ministerio de Educación, Cultura y Deportes, se transfiere al I.U.T. Dr. Delfín Mendoza, parte de la población estudiantil que cursaba estudios en el Instituto Universitario de Tecnología Isaac Newton, creando el programa de profesionalización docente en: Sucre, Monagas, Bolívar y Delta Amacuro. En total se realizaron III promociones, con un egreso de 2536 TSU en educación integral y preescolar. Aunado al desarrollo histórico-institucional, primero como IUT.  "},
+
+    {p: "Dr. Delfín Mendoza y luego como Universidad Territorial Deltaica Francisco Tamayo, se ha dado apoyo a una de las misiones banderas del gobierno nacional, como es la Misión Sucre. Las instalaciones y espacios físicos sirven para que toda la población estudiantil que un día fue excluida de la educación universitaria, hoy tenga la oportunidad de formarse profesionalmente. "},
+
+    {p: "En el año 2002, el IUT. Dr. Delfín Mendoza marcó un nuevo hito en la historia académica de la institución, al lograr la firma del convenio de cooperación entre la gobernación del estado Monagas y la Alcaldía del Municipio Libertador, que permitió la creación de una extensión en Temblador, ubicada en la comunidad Mata de Venado, estando como Coordinadora del Programa la Profesora Roxana Hernández para el periodo 2002 al 2005, egresando así su primer contingente de técnicos superiores universitarios."},
+
+    {p: " En tiempos del I.U.T Dr. Delfín Mendoza, el 26 de Junio de 2014, egresa la primera promoción de Ingenieros y Licenciados, egresando 126 nuevos profesionales, también, egresaron los graduandos de la XVII Promoción de Técnicos Superiores Universitarios de las carreras de administración mención fiscal y tributaria, educación física y educación integral y la IV promoción de TSU en los Programas Nacionales de Formación en administración y agroalimentación. En este acto estuvo presente la primera autoridad del Municipio Libertador, José Figuera, quien acompañó a padres y familiares.  "},
+
+    {p: "En ese mismo acto, el Coordinador de la Comisión de Modernización y Transformación, Luis Alfredo Marín, acompañado por el Consejo Directivo, expresó la disposición, ahora como Universidad Territorial Deltaica Francisco Tamayo, de seguir trabajando en el marco de la territorialización, con proyectos sustentados en las necesidades reales del Municipio Libertador. Asimismo, se informó sobre la solicitud realizada al Ministerio del Poder Popular para la Educación Universitaria para la prosecución de estudios en educación; matemáticas, inglés, física y química y sobre el estudio de factibilidad para el Programa Nacional de Formación en Medicina Veterinaria. "},
+
+    {p: "La Extensión Temblador atiende los Programas Nacionales de Formación (PNF) en administración y agroalimentación, teniendo una matrícula en total de 654 estudiantes en ese municipio. "},
+
+
+
+    
+]
+
+---
+
+<Layout>
+    <section class="uni">
+    {carpag.map(({p}) =>(
+
+        <CardPag p={p}></CardPag>
+        
+    ))}
+    </section>
+
+    
+</Layout>
+
+<style>
+
+    
+    .uni {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>
+

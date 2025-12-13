@@ -1,17 +1,15 @@
 ---
 const links = [
-  { texto: "La universidad", url: "#" },
-  { texto: "Estudiantes de la UTD", url: "#" },
-  { texto: "Información", url: "#" },
-  { texto: "Contacto", url: "#" },
-  { texto: "Más...", url: "#", extra: "color2" }
+  { texto: "La universidad", url: "/nav/universidad", },
+  { texto: "Información", url: "/nav/informacion" },
+  { texto: "Contacto", url: "/nav/contacto" }
 ];
 ---
 
 <header class="header display_flex">
   <div class="cursor">
     <a href="https://pag2-brown.vercel.app">
-      <span>UTD</span>
+      <span>UTDFT</span>
     </a>
     
   </div>
@@ -23,8 +21,8 @@ const links = [
     </label>
 
     <ul class="navegacion display_flex" id="navegacion">
-      {links.map(({ url, texto, extra }) => (
-        <li class={`navegacion-li ${extra || ""}`}>
+      {links.map(({ url, texto }) => (
+        <li class={`navegacion-li`}>
           <a href={url}>{texto}</a>
         </li>
       ))}
