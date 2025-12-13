@@ -14,3 +14,28 @@ const carpag = [
 
 {h3: "Luisani Velásquez" ,p:"luisanidejesusva2006@gmail.com"},
     ]
+
+---
+
+    <Layout>
+    <section class="uni">
+    {carpag.map(({p}) =>(
+
+        <CardPag p={p}></CardPag>
+        
+    ))}
+    </section>
+
+    
+</Layout>
+
+<style>
+
+    
+    .uni {
+        padding:100px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+</style>
